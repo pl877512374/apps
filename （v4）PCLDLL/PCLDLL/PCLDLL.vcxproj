@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{029C5131-1DE7-46A3-8768-1D9A27207467}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>PCLDLL</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v100</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v100</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>..\Debug</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\..\（v8）NavigateLaser\NavigateLaser\bin\Release</OutDir>
+    <IncludePath>D:\Program Files %28x86%29\PCL 1.6.0\include\pcl-1.6;D:\Program Files %28x86%29\PCL 1.6.0\3rdParty\Boost\include;D:\Program Files %28x86%29\PCL 1.6.0\3rdParty\Eigen\include;D:\Program Files %28x86%29\PCL 1.6.0\3rdParty\FLANN\include;D:\Program Files %28x86%29\PCL 1.6.0\3rdParty\OpenNI\Include;D:\Program Files %28x86%29\PCL 1.6.0\3rdParty\Qhull\include;D:\Program Files %28x86%29\PCL 1.6.0\3rdParty\VTK\include\vtk-5.8;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\Program Files %28x86%29\PCL 1.6.0\lib;D:\Program Files %28x86%29\PCL 1.6.0\3rdParty\Boost\lib;D:\Program Files %28x86%29\PCL 1.6.0\3rdParty\FLANN\lib;D:\Program Files %28x86%29\PCL 1.6.0\3rdParty\OpenNI\Lib;D:\Program Files %28x86%29\PCL 1.6.0\3rdParty\Qhull\lib;D:\Program Files %28x86%29\PCL 1.6.0\3rdParty\VTK\lib\vtk-5.8;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;PCLDLL_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Program Files (x86)\PCL 1.6.0\3rdParty\VTK\include\vtk-5.8;D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6;D:\Program Files (x86)\PCL 1.6.0\3rdParty\Eigen\include;D:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\include;D:\Program Files (x86)\OpenNI\Include;D:\Program Files (x86)\PCL 1.6.0\3rdParty\FLANN\include;D:\Program Files (x86)\PCL 1.6.0\3rdParty\Qhull\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>D:/Program Files (x86)/PCL 1.6.0/lib;D:/Program Files (x86)/PCL 1.6.0/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>pcl_common_release.lib;pcl_features_release.lib;pcl_filters_release.lib;pcl_io_release.lib;pcl_io_ply_release.lib;pcl_kdtree_release.lib;pcl_keypoints_release.lib;pcl_ml_release.lib;pcl_octree_release.lib;pcl_outofcore_release.lib;pcl_people_release.lib;pcl_recognition_release.lib;pcl_registration_release.lib;pcl_sample_consensus_release.lib;pcl_search_release.lib;pcl_segmentation_release.lib;pcl_stereo_release.lib;pcl_surface_release.lib;pcl_tracking_release.lib;pcl_visualization_release.lib;libboost_atomic-vc120-mt-1_59.lib;libboost_chrono-vc120-mt-1_59.lib;libboost_container-vc120-mt-1_59.lib;libboost_context-vc120-mt-1_59.lib;libboost_coroutine-vc120-mt-1_59.lib;libboost_date_time-vc120-mt-1_59.lib;libboost_exception-vc120-mt-1_59.lib;libboost_filesystem-vc120-mt-1_59.lib;libboost_graph-vc120-mt-1_59.lib;libboost_iostreams-vc120-mt-1_59.lib;libboost_locale-vc120-mt-1_59.lib;libboost_log-vc120-mt-1_59.lib;libboost_log_setup-vc120-mt-1_59.lib;libboost_math_c99-vc120-mt-1_59.lib;libboost_math_c99f-vc120-mt-1_59.lib;libboost_math_c99l-vc120-mt-1_59.lib;libboost_math_tr1-vc120-mt-1_59.lib;libboost_math_tr1f-vc120-mt-1_59.lib;libboost_math_tr1l-vc120-mt-1_59.lib;libboost_mpi-vc120-mt-1_59.lib;libboost_prg_exec_monitor-vc120-mt-1_59.lib;libboost_program_options-vc120-mt-1_59.lib;libboost_random-vc120-mt-1_59.lib;libboost_regex-vc120-mt-1_59.lib;libboost_serialization-vc120-mt-1_59.lib;libboost_signals-vc120-mt-1_59.lib;libboost_system-vc120-mt-1_59.lib;libboost_test_exec_monitor-vc120-mt-1_59.lib;libboost_thread-vc120-mt-1_59.lib;libboost_timer-vc120-mt-1_59.lib;libboost_unit_test_framework-vc120-mt-1_59.lib;libboost_wave-vc120-mt-1_59.lib;libboost_wserialization-vc120-mt-1_59.lib;vtkalglib-7.0.lib;vtkChartsCore-7.0.lib;vtkCommonCore-7.0.lib;vtkCommonColor-7.0.lib;vtkCommonComputationalGeometry-7.0.lib;vtkCommonDataModel-7.0.lib;vtkCommonExecutionModel-7.0.lib;vtkCommonMath-7.0.lib;vtkCommonMisc-7.0.lib;vtkCommonSystem-7.0.lib;vtkCommonTransforms-7.0.lib;vtkDICOMParser-7.0.lib;vtkDomainsChemistry-7.0.lib;vtkexoIIc-7.0.lib;vtkexpat-7.0.lib;vtkFiltersAMR-7.0.lib;vtkFiltersCore-7.0.lib;vtkFiltersExtraction-7.0.lib;vtkFiltersFlowPaths-7.0.lib;vtkFiltersGeneral-7.0.lib;vtkFiltersGeneric-7.0.lib;vtkFiltersGeometry-7.0.lib;vtkFiltersHybrid-7.0.lib;vtkFiltersHyperTree-7.0.lib;vtkFiltersImaging-7.0.lib;vtkFiltersModeling-7.0.lib;vtkFiltersParallel-7.0.lib;vtkFiltersParallelImaging-7.0.lib;vtkFiltersProgrammable-7.0.lib;vtkFiltersSelection-7.0.lib;vtkFiltersSMP-7.0.lib;vtkFiltersSources-7.0.lib;vtkFiltersStatistics-7.0.lib;vtkFiltersTexture-7.0.lib;vtkFiltersVerdict-7.0.lib;vtkfreetype-7.0.lib;vtkGeovisCore-7.0.lib;vtkhdf5-7.0.lib;vtkhdf5_hl-7.0.lib;vtkImagingColor-7.0.lib;vtkImagingCore-7.0.lib;vtkImagingFourier-7.0.lib;vtkImagingGeneral-7.0.lib;vtkImagingHybrid-7.0.lib;vtkImagingMath-7.0.lib;vtkImagingMorphological-7.0.lib;vtkImagingSources-7.0.lib;vtkImagingStatistics-7.0.lib;vtkImagingStencil-7.0.lib;vtkInfovisCore-7.0.lib;vtkInfovisLayout-7.0.lib;vtkInteractionImage-7.0.lib;vtkInteractionStyle-7.0.lib;vtkInteractionWidgets-7.0.lib;vtkIOAMR-7.0.lib;vtkIOCore-7.0.lib;vtkIOEnSight-7.0.lib;vtkIOExodus-7.0.lib;vtkIOExport-7.0.lib;vtkIOGeometry-7.0.lib;vtkIOImage-7.0.lib;vtkIOImport-7.0.lib;vtkIOInfovis-7.0.lib;vtkIOLegacy-7.0.lib;vtkIOLSDyna-7.0.lib;vtkIOMINC-7.0.lib;vtkIOMovie-7.0.lib;vtkIONetCDF-7.0.lib;vtkIOParallel-7.0.lib;vtkIOParallelXML-7.0.lib;vtkIOPLY-7.0.lib;vtkIOSQL-7.0.lib;vtkIOVideo-7.0.lib;vtkIOXML-7.0.lib;vtkIOXMLParser-7.0.lib;vtkjpeg-7.0.lib;vtkjsoncpp-7.0.lib;vtklibxml2-7.0.lib;vtkmetaio-7.0.lib;vtkNetCDF-7.0.lib;vtkNetCDF_cxx-7.0.lib;vtkoggtheora-7.0.lib;vtkParallelCore-7.0.lib;vtkpng-7.0.lib;vtkproj4-7.0.lib;vtkRenderingAnnotation-7.0.lib;vtkRenderingContext2D-7.0.lib;vtkRenderingContextOpenGL2-7.0.lib;vtkRenderingCore-7.0.lib;vtkRenderingFreeType-7.0.lib;vtkRenderingImage-7.0.lib;vtkRenderingLabel-7.0.lib;vtkRenderingLOD-7.0.lib;vtkRenderingOpenGL2-7.0.lib;vtkRenderingVolume-7.0.lib;vtkRenderingVolumeOpenGL2-7.0.lib;vtksqlite-7.0.lib;vtksys-7.0.lib;vtktiff-7.0.lib;vtkverdict-7.0.lib;vtkViewsContext2D-7.0.lib;vtkViewsCore-7.0.lib;vtkViewsInfovis-7.0.lib;vtkzlib-7.0.lib;vtkGUISupportQt-7.0.lib;vtkRenderingQt-7.0.lib;vtkViewsQt-7.0.lib;flann_cpp_s.lib;qhullstatic.lib;OpenNI2.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;comctl32.lib;wsock32.lib;glu32.lib;opengl32.lib;ws2_32.lib;Psapi.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>Disabled</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;PCLDLL_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib
+;pcl_kdtree_release.lib;
+pcl_io_release.lib;
+pcl_search_release.lib;
+pcl_segmentation_release.lib;
+pcl_apps_release.lib
+;pcl_features_release.lib;
+pcl_filters_release.lib;
+pcl_visualization_release.lib
+;pcl_common_release.lib
+;flann_cpp_s.lib
+;flann.lib;
+flann_cuda_s.lib;
+flann_s.lib
+;libboost_system-vc100-mt-1_47.lib;
+libboost_filesystem-vc100-mt-1_47.lib;
+libboost_thread-vc100-mt-1_47.lib
+;libboost_date_time-vc100-mt-1_47.lib;
+libboost_iostreams-vc100-mt-1_47.lib;
+vtkalglib.lib;
+vtkCharts.lib
+;vtkCommon.lib
+;vtkDICOMParser.lib;
+vtkexoIIc.lib;
+vtkexpat.lib;
+vtkFiltering.lib;
+vtkfreetype.lib
+;vtkftgl.lib;
+vtkGenericFiltering.lib
+;vtkGeovis.lib
+;vtkGraphics.lib;
+vtkhdf5.lib;
+vtkHybrid.lib
+;vtkImaging.lib
+;vtkInfovis.lib;
+vtkIO.lib
+;vtkjpeg.lib
+;vtklibxml2.lib;
+vtkmetaio.lib;
+vtkNetCDF.lib;
+vtkNetCDF_cxx.lib;
+vtkpng.lib;
+vtkproj4.lib;
+vtkRendering.lib
+;vtksqlite.lib;
+vtksys.lib
+;vtktiff.lib
+;vtkverdict.lib
+;vtkViews.lib;
+vtkVolumeRendering.lib;
+vtkWidgets.lib;
+vtkzlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>
+      </IgnoreSpecificDefaultLibraries>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="PCLDLL.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp">
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="PCLDLL.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

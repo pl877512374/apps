@@ -1,0 +1,227 @@
+﻿生成启动时间为 2019/4/12 10:19:27。
+     1>项目“E:\712雷达\712相关文件\712应用版源码\712应用版源码\712应用版源码\（v4）PCLDLL\PCLDLL\PCLDLL.vcxproj”在节点 2 上(rebuild 个目标)。
+     1>_PrepareForClean:
+         正在删除文件“Debug\PCLDLL.lastbuildstate”。
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(299,5): warning MSB8004: Output 目录未以斜杠结尾。此生成实例将添加斜杠，因为必须有这个斜杠才能正确计算 Output 目录。
+       InitializeBuildStatus:
+         正在对“Debug\PCLDLL.unsuccessfulbuild”执行 Touch 任务。
+       ClCompile:
+         d:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"D:\Program Files (x86)\PCL 1.6.0\3rdParty\VTK\include\vtk-5.8" /I"D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6" /I"D:\Program Files (x86)\PCL 1.6.0\3rdParty\Eigen\include" /I"D:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\include" /I"D:\Program Files (x86)\OpenNI\Include" /I"D:\Program Files (x86)\PCL 1.6.0\3rdParty\FLANN\include" /I"D:\Program Files (x86)\PCL 1.6.0\3rdParty\Qhull\include" /Zi /nologo /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D PCLDLL_EXPORTS /D _WINDLL /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"StdAfx.h" /Fp"Debug\PCLDLL.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         d:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"D:\Program Files (x86)\PCL 1.6.0\3rdParty\VTK\include\vtk-5.8" /I"D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6" /I"D:\Program Files (x86)\PCL 1.6.0\3rdParty\Eigen\include" /I"D:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\include" /I"D:\Program Files (x86)\OpenNI\Include" /I"D:\Program Files (x86)\PCL 1.6.0\3rdParty\FLANN\include" /I"D:\Program Files (x86)\PCL 1.6.0\3rdParty\Qhull\include" /Zi /nologo /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D PCLDLL_EXPORTS /D _WINDLL /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt dllmain.cpp
+         dllmain.cpp
+         d:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"D:\Program Files (x86)\PCL 1.6.0\3rdParty\VTK\include\vtk-5.8" /I"D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6" /I"D:\Program Files (x86)\PCL 1.6.0\3rdParty\Eigen\include" /I"D:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\include" /I"D:\Program Files (x86)\OpenNI\Include" /I"D:\Program Files (x86)\PCL 1.6.0\3rdParty\FLANN\include" /I"D:\Program Files (x86)\PCL 1.6.0\3rdParty\Qhull\include" /Zi /nologo /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D PCLDLL_EXPORTS /D _WINDLL /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt PCLDLL.cpp
+         PCLDLL.cpp
+     1>D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/point_traits.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/point_cloud.h(1021): warning C4521: “pcl::PointCloud<Eigen::MatrixXf>”: 指定了多个复制构造函数
+     1>D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/point_traits.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/impl/point_types.hpp(1008): warning C4996: 'pcl::SHOT': USE SHOT352 FOR SHAPE AND SHOT1344 FOR SHAPE+COLOR INSTEAD
+                 D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/impl/point_types.hpp(1003) : 参见“pcl::SHOT”的声明
+     1>D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/impl/point_types.hpp(1009): warning C4996: 'pcl::SHOT': USE SHOT352 FOR SHAPE AND SHOT1344 FOR SHAPE+COLOR INSTEAD
+                 D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/impl/point_types.hpp(1003) : 参见“pcl::SHOT”的声明
+     1>D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/impl/point_types.hpp(1012): warning C4996: 'pcl::SHOT::rf': USE SHOT352 FOR SHAPE AND SHOT1344 FOR SHAPE+COLOR INSTEAD
+                 D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/impl/point_types.hpp(1005) : 参见“pcl::SHOT::rf”的声明
+     1>D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/impl/point_types.hpp(1013): warning C4996: 'pcl::SHOT::descriptor': USE SHOT352 FOR SHAPE AND SHOT1344 FOR SHAPE+COLOR INSTEAD
+                 D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/impl/point_types.hpp(1004) : 参见“pcl::SHOT::descriptor”的声明
+     1>D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/impl/point_types.hpp(1014): warning C4996: 'pcl::SHOT::descriptor': USE SHOT352 FOR SHAPE AND SHOT1344 FOR SHAPE+COLOR INSTEAD
+                 D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/impl/point_types.hpp(1004) : 参见“pcl::SHOT::descriptor”的声明
+     1>D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/impl/point_types.hpp(1014): warning C4996: 'pcl::SHOT::descriptor': USE SHOT352 FOR SHAPE AND SHOT1344 FOR SHAPE+COLOR INSTEAD
+                 D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/impl/point_types.hpp(1004) : 参见“pcl::SHOT::descriptor”的声明
+     1>D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/point_traits.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/point_traits.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/point_representation.h(445): warning C4996: 'pcl::SHOT': USE SHOT352 FOR SHAPE AND SHOT1344 FOR SHAPE+COLOR INSTEAD
+                 D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/impl/point_types.hpp(1003) : 参见“pcl::SHOT”的声明
+     1>D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/point_representation.h(446): warning C4996: 'pcl::SHOT': USE SHOT352 FOR SHAPE AND SHOT1344 FOR SHAPE+COLOR INSTEAD
+                 D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/impl/point_types.hpp(1003) : 参见“pcl::SHOT”的声明
+     1>D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/point_representation.h(449): warning C4996: 'pcl::DefaultPointRepresentation<pcl::SHOT>': SHOT POINT IS DEPRECATED, USE SHOT352 FOR SHAPE AND SHOT1344 FOR SHAPE+COLOR INSTEAD
+                 D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/point_representation.h(446) : 参见“pcl::DefaultPointRepresentation<pcl::SHOT>”的声明
+     1>D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/point_representation.h(455): warning C4996: 'pcl::SHOT': USE SHOT352 FOR SHAPE AND SHOT1344 FOR SHAPE+COLOR INSTEAD
+                 D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/impl/point_types.hpp(1003) : 参见“pcl::SHOT”的声明
+     1>D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/point_representation.h(458): warning C4996: 'pcl::SHOT::descriptor': USE SHOT352 FOR SHAPE AND SHOT1344 FOR SHAPE+COLOR INSTEAD
+                 D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/impl/point_types.hpp(1004) : 参见“pcl::SHOT::descriptor”的声明
+     1>D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/point_representation.h(460): warning C4996: 'pcl::DefaultPointRepresentation<pcl::SHOT>::~DefaultPointRepresentation': SHOT POINT IS DEPRECATED, USE SHOT352 FOR SHAPE AND SHOT1344 FOR SHAPE+COLOR INSTEAD
+                 D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/point_representation.h(460) : 编译器已在此处生成“pcl::DefaultPointRepresentation<pcl::SHOT>::~DefaultPointRepresentation”
+                 此诊断出现在编译器生成的函数“void *pcl::DefaultPointRepresentation<pcl::SHOT>::__delDtor(unsigned int)”中
+     1>D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/point_representation.h(460): warning C4996: 'pcl::DefaultPointRepresentation<pcl::SHOT>::~DefaultPointRepresentation': SHOT POINT IS DEPRECATED, USE SHOT352 FOR SHAPE AND SHOT1344 FOR SHAPE+COLOR INSTEAD
+                 D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/point_representation.h(460) : 编译器已在此处生成“pcl::DefaultPointRepresentation<pcl::SHOT>::~DefaultPointRepresentation”
+                 此诊断出现在编译器生成的函数“void *pcl::DefaultPointRepresentation<pcl::SHOT>::__delDtor(unsigned int)”中
+     1>D:\Program Files (x86)\PCL 1.6.0\3rdParty\FLANN\include\flann/util/logger.h(66): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(234) : 参见“fopen”的声明
+     1>D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/point_cloud.h(603): warning C4521: “pcl::PointCloud<PointT>”: 指定了多个复制构造函数
+                 with
+                 [
+                     PointT=pcl::PointXYZ
+                 ]
+                 D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/visualization/pcl_visualizer.h(503): 参见对正在编译的类 模板 实例化“pcl::PointCloud<PointT>”的引用
+                 with
+                 [
+                     PointT=pcl::PointXYZ
+                 ]
+     1>D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/point_cloud.h(603): warning C4521: “pcl::PointCloud<PointT>”: 指定了多个复制构造函数
+                 with
+                 [
+                     PointT=pcl::Normal
+                 ]
+                 D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/visualization/pcl_visualizer.h(504): 参见对正在编译的类 模板 实例化“pcl::PointCloud<PointT>”的引用
+                 with
+                 [
+                     PointT=pcl::Normal
+                 ]
+     1>D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/point_cloud.h(603): warning C4521: “pcl::PointCloud<PointT>”: 指定了多个复制构造函数
+                 with
+                 [
+                     PointT=pcl::PrincipalCurvatures
+                 ]
+                 D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/visualization/pcl_visualizer.h(505): 参见对正在编译的类 模板 实例化“pcl::PointCloud<PointT>”的引用
+                 with
+                 [
+                     PointT=pcl::PrincipalCurvatures
+                 ]
+     1>D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/point_cloud.h(603): warning C4521: “pcl::PointCloud<PointT>”: 指定了多个复制构造函数
+                 with
+                 [
+                     PointT=pcl::PointXYZRGB
+                 ]
+                 D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/visualization/pcl_visualizer.h(726): 参见对正在编译的类 模板 实例化“pcl::PointCloud<PointT>”的引用
+                 with
+                 [
+                     PointT=pcl::PointXYZRGB
+                 ]
+     1>D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/point_cloud.h(603): warning C4521: “pcl::PointCloud<PointT>”: 指定了多个复制构造函数
+                 with
+                 [
+                     PointT=pcl::PointXYZRGBA
+                 ]
+                 D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/visualization/pcl_visualizer.h(739): 参见对正在编译的类 模板 实例化“pcl::PointCloud<PointT>”的引用
+                 with
+                 [
+                     PointT=pcl::PointXYZRGBA
+                 ]
+     1>D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/visualization/impl/pcl_visualizer.hpp(1507): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/visualization/impl/pcl_visualizer.hpp(1666): warning C4101: “LaserAngle”: 未引用的局部变量
+     1>PCLDLL.cpp(204): warning C4018: “<”: 有符号/无符号不匹配
+     1>PCLDLL.cpp(216): warning C4018: “<”: 有符号/无符号不匹配
+     1>PCLDLL.cpp(235): warning C4018: “<”: 有符号/无符号不匹配
+     1>PCLDLL.cpp(247): warning C4018: “<”: 有符号/无符号不匹配
+     1>PCLDLL.cpp(266): warning C4018: “<”: 有符号/无符号不匹配
+     1>PCLDLL.cpp(278): warning C4018: “<”: 有符号/无符号不匹配
+     1>PCLDLL.cpp(418): warning C4018: “<”: 有符号/无符号不匹配
+     1>PCLDLL.cpp(434): warning C4018: “<”: 有符号/无符号不匹配
+     1>PCLDLL.cpp(827): warning C4018: “<”: 有符号/无符号不匹配
+     1>PCLDLL.cpp(1015): warning C4018: “<”: 有符号/无符号不匹配
+     1>D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/visualization/impl/pcl_visualizer.hpp(1771): warning C4018: “<”: 有符号/无符号不匹配
+                 PCLDLL.cpp(1000): 参见对正在编译的函数 模板 实例化“bool pcl::visualization::PCLVisualizer::addPolyLine<pcl::PointXYZRGB>(const boost::shared_ptr<T> &,double,double,double,const std::string &,int)”的引用
+                 with
+                 [
+                     T=const pcl::PointCloud<pcl::PointXYZRGB>
+                 ]
+     1>D:\Program Files (x86)\PCL 1.6.0\3rdParty\FLANN\include\flann/flann.hpp(78): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(234) : 参见“fopen”的声明
+                 D:\Program Files (x86)\PCL 1.6.0\3rdParty\FLANN\include\flann/flann.hpp(114): 参见对正在编译的函数 模板 实例化“flann::NNIndex<Distance> *flann::load_saved_index<Distance>(const flann::Matrix<T> &,const std::string &,Distance)”的引用
+                 with
+                 [
+                     Distance=flann::L2_Simple<float>,
+                     T=float
+                 ]
+                 D:\Program Files (x86)\PCL 1.6.0\3rdParty\FLANN\include\flann/flann.hpp(107): 编译类 模板 成员函数“flann::Index<Distance>::Index(const flann::Matrix<T> &,const flann::IndexParams &,Distance)”时
+                 with
+                 [
+                     Distance=flann::L2_Simple<float>,
+                     T=float
+                 ]
+                 D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/kdtree/kdtree_flann.h(377): 参见对正在编译的类 模板 实例化“flann::Index<Distance>”的引用
+                 with
+                 [
+                     Distance=flann::L2_Simple<float>
+                 ]
+     1>D:\Program Files (x86)\PCL 1.6.0\3rdParty\FLANN\include\flann/algorithms/dist.h(103): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+                 D:\Program Files (x86)\PCL 1.6.0\3rdParty\FLANN\include\flann/algorithms/kmeans_index.h(688): 参见对正在编译的函数 模板 实例化“float flann::L2_Simple<T>::operator ()<T*,double*>(Iterator1,Iterator2,size_t,float) const”的引用
+                 with
+                 [
+                     T=float,
+                     Iterator1=float *,
+                     Iterator2=double *
+                 ]
+                 D:\Program Files (x86)\PCL 1.6.0\3rdParty\FLANN\include\flann/algorithms/kmeans_index.h(644): 编译类 模板 成员函数“void flann::KMeansIndex<Distance>::computeClustering(flann::KMeansIndex<Distance>::KMeansNode *,int *,int,int,int)”时
+                 with
+                 [
+                     Distance=flann::L2_Simple<float>
+                 ]
+                 D:\Program Files (x86)\PCL 1.6.0\3rdParty\FLANN\include\flann/algorithms/all_indices.h(96): 参见对正在编译的类 模板 实例化“flann::KMeansIndex<Distance>”的引用
+                 with
+                 [
+                     Distance=flann::L2_Simple<float>
+                 ]
+                 D:\Program Files (x86)\PCL 1.6.0\3rdParty\FLANN\include\flann/algorithms/all_indices.h(102): 参见对正在编译的类 模板 实例化“flann::valid_combination<Index,Distance,ElementType>::needs_kdtree_distance<T>”的引用
+                 with
+                 [
+                     Index=flann::KMeansIndex,
+                     Distance=flann::L2_Simple<float>,
+                     ElementType=ElementType,
+                     T=flann::KMeansIndex<flann::L2_Simple<float>>
+                 ]
+                 D:\Program Files (x86)\PCL 1.6.0\3rdParty\FLANN\include\flann/algorithms/all_indices.h(152): 参见对正在编译的类 模板 实例化“flann::valid_combination<Index,Distance,ElementType>”的引用
+                 with
+                 [
+                     Index=flann::KMeansIndex,
+                     Distance=flann::L2_Simple<float>,
+                     ElementType=ElementType
+                 ]
+                 D:\Program Files (x86)\PCL 1.6.0\3rdParty\FLANN\include\flann/flann.hpp(118): 参见对正在编译的函数 模板 实例化“flann::NNIndex<Distance> *flann::create_index_by_type<Distance>(const flann::Matrix<T> &,const flann::IndexParams &,const Distance &)”的引用
+                 with
+                 [
+                     Distance=flann::L2_Simple<float>,
+                     T=float
+                 ]
+     1>d:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\xutility(2227): warning C4996: 'std::_Copy_impl': Function call with parameters that may be unsafe - this call relies on the caller to check that the passed values are correct. To disable this warning, use -D_SCL_SECURE_NO_WARNINGS. See documentation on how to use Visual C++ 'Checked Iterators'
+                 d:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\xutility(2212) : 参见“std::_Copy_impl”的声明
+                 D:\Program Files (x86)\PCL 1.6.0\3rdParty\FLANN\include\flann/util/sampling.h(73): 参见对正在编译的函数 模板 实例化“_OutIt std::copy<T*,T*>(_InIt,_InIt,_OutIt)”的引用
+                 with
+                 [
+                     _OutIt=float *,
+                     T=float,
+                     _InIt=float *
+                 ]
+                 D:\Program Files (x86)\PCL 1.6.0\3rdParty\FLANN\include\flann/algorithms/autotuned_index.h(423): 参见对正在编译的函数 模板 实例化“flann::Matrix<T> flann::random_sample<float>(const flann::Matrix<T> &,size_t)”的引用
+                 with
+                 [
+                     T=float
+                 ]
+                 D:\Program Files (x86)\PCL 1.6.0\3rdParty\FLANN\include\flann/algorithms/autotuned_index.h(407): 编译类 模板 成员函数“flann::IndexParams flann::AutotunedIndex<Distance>::estimateBuildParams(void)”时
+                 with
+                 [
+                     Distance=flann::L2_Simple<float>
+                 ]
+                 D:\Program Files (x86)\PCL 1.6.0\3rdParty\FLANN\include\flann/algorithms/all_indices.h(96): 参见对正在编译的类 模板 实例化“flann::AutotunedIndex<Distance>”的引用
+                 with
+                 [
+                     Distance=flann::L2_Simple<float>
+                 ]
+                 D:\Program Files (x86)\PCL 1.6.0\3rdParty\FLANN\include\flann/algorithms/all_indices.h(102): 参见对正在编译的类 模板 实例化“flann::valid_combination<Index,Distance,ElementType>::needs_kdtree_distance<T>”的引用
+                 with
+                 [
+                     Index=flann::AutotunedIndex,
+                     Distance=flann::L2_Simple<float>,
+                     ElementType=ElementType,
+                     T=flann::AutotunedIndex<flann::L2_Simple<float>>
+                 ]
+                 D:\Program Files (x86)\PCL 1.6.0\3rdParty\FLANN\include\flann/algorithms/all_indices.h(158): 参见对正在编译的类 模板 实例化“flann::valid_combination<Index,Distance,ElementType>”的引用
+                 with
+                 [
+                     Index=flann::AutotunedIndex,
+                     Distance=flann::L2_Simple<float>,
+                     ElementType=ElementType
+                 ]
+       ManifestResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\PCLDLL.dll.embed.manifest.res" Debug\PCLDLL_manifest.rc 
+       Link:
+         d:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"..\Debug\PCLDLL.dll" /INCREMENTAL /NOLOGO /LIBPATH:"D:/Program Files (x86)/PCL 1.6.0/lib" /LIBPATH:"D:/Program Files (x86)/PCL 1.6.0/lib/Debug" pcl_common_release.lib pcl_features_release.lib pcl_filters_release.lib pcl_io_release.lib pcl_io_ply_release.lib pcl_kdtree_release.lib pcl_keypoints_release.lib pcl_ml_release.lib pcl_octree_release.lib pcl_outofcore_release.lib pcl_people_release.lib pcl_recognition_release.lib pcl_registration_release.lib pcl_sample_consensus_release.lib pcl_search_release.lib pcl_segmentation_release.lib pcl_stereo_release.lib pcl_surface_release.lib pcl_tracking_release.lib pcl_visualization_release.lib "libboost_atomic-vc120-mt-1_59.lib" "libboost_chrono-vc120-mt-1_59.lib" "libboost_container-vc120-mt-1_59.lib" "libboost_context-vc120-mt-1_59.lib" "libboost_coroutine-vc120-mt-1_59.lib" "libboost_date_time-vc120-mt-1_59.lib" "libboost_exception-vc120-mt-1_59.lib" "libboost_filesystem-vc120-mt-1_59.lib" "libboost_graph-vc120-mt-1_59.lib" "libboost_iostreams-vc120-mt-1_59.lib" "libboost_locale-vc120-mt-1_59.lib" "libboost_log-vc120-mt-1_59.lib" "libboost_log_setup-vc120-mt-1_59.lib" "libboost_math_c99-vc120-mt-1_59.lib" "libboost_math_c99f-vc120-mt-1_59.lib" "libboost_math_c99l-vc120-mt-1_59.lib" "libboost_math_tr1-vc120-mt-1_59.lib" "libboost_math_tr1f-vc120-mt-1_59.lib" "libboost_math_tr1l-vc120-mt-1_59.lib" "libboost_mpi-vc120-mt-1_59.lib" "libboost_prg_exec_monitor-vc120-mt-1_59.lib" "libboost_program_options-vc120-mt-1_59.lib" "libboost_random-vc120-mt-1_59.lib" "libboost_regex-vc120-mt-1_59.lib" "libboost_serialization-vc120-mt-1_59.lib" "libboost_signals-vc120-mt-1_59.lib" "libboost_system-vc120-mt-1_59.lib" "libboost_test_exec_monitor-vc120-mt-1_59.lib" "libboost_thread-vc120-mt-1_59.lib" "libboost_timer-vc120-mt-1_59.lib" "libboost_unit_test_framework-vc120-mt-1_59.lib" "libboost_wave-vc120-mt-1_59.lib" "libboost_wserialization-vc120-mt-1_59.lib" "vtkalglib-7.0.lib" "vtkChartsCore-7.0.lib" "vtkCommonCore-7.0.lib" "vtkCommonColor-7.0.lib" "vtkCommonComputationalGeometry-7.0.lib" "vtkCommonDataModel-7.0.lib" "vtkCommonExecutionModel-7.0.lib" "vtkCommonMath-7.0.lib" "vtkCommonMisc-7.0.lib" "vtkCommonSystem-7.0.lib" "vtkCommonTransforms-7.0.lib" "vtkDICOMParser-7.0.lib" "vtkDomainsChemistry-7.0.lib" "vtkexoIIc-7.0.lib" "vtkexpat-7.0.lib" "vtkFiltersAMR-7.0.lib" "vtkFiltersCore-7.0.lib" "vtkFiltersExtraction-7.0.lib" "vtkFiltersFlowPaths-7.0.lib" "vtkFiltersGeneral-7.0.lib" "vtkFiltersGeneric-7.0.lib" "vtkFiltersGeometry-7.0.lib" "vtkFiltersHybrid-7.0.lib" "vtkFiltersHyperTree-7.0.lib" "vtkFiltersImaging-7.0.lib" "vtkFiltersModeling-7.0.lib" "vtkFiltersParallel-7.0.lib" "vtkFiltersParallelImaging-7.0.lib" "vtkFiltersProgrammable-7.0.lib" "vtkFiltersSelection-7.0.lib" "vtkFiltersSMP-7.0.lib" "vtkFiltersSources-7.0.lib" "vtkFiltersStatistics-7.0.lib" "vtkFiltersTexture-7.0.lib" "vtkFiltersVerdict-7.0.lib" "vtkfreetype-7.0.lib" "vtkGeovisCore-7.0.lib" "vtkhdf5-7.0.lib" "vtkhdf5_hl-7.0.lib" "vtkImagingColor-7.0.lib" "vtkImagingCore-7.0.lib" "vtkImagingFourier-7.0.lib" "vtkImagingGeneral-7.0.lib" "vtkImagingHybrid-7.0.lib" "vtkImagingMath-7.0.lib" "vtkImagingMorphological-7.0.lib" "vtkImagingSources-7.0.lib" "vtkImagingStatistics-7.0.lib" "vtkImagingStencil-7.0.lib" "vtkInfovisCore-7.0.lib" "vtkInfovisLayout-7.0.lib" "vtkInteractionImage-7.0.lib" "vtkInteractionStyle-7.0.lib" "vtkInteractionWidgets-7.0.lib" "vtkIOAMR-7.0.lib" "vtkIOCore-7.0.lib" "vtkIOEnSight-7.0.lib" "vtkIOExodus-7.0.lib" "vtkIOExport-7.0.lib" "vtkIOGeometry-7.0.lib" "vtkIOImage-7.0.lib" "vtkIOImport-7.0.lib" "vtkIOInfovis-7.0.lib" "vtkIOLegacy-7.0.lib" "vtkIOLSDyna-7.0.lib" "vtkIOMINC-7.0.lib" "vtkIOMovie-7.0.lib" "vtkIONetCDF-7.0.lib" "vtkIOParallel-7.0.lib" "vtkIOParallelXML-7.0.lib" "vtkIOPLY-7.0.lib" "vtkIOSQL-7.0.lib" "vtkIOVideo-7.0.lib" "vtkIOXML-7.0.lib" "vtkIOXMLParser-7.0.lib" "vtkjpeg-7.0.lib" "vtkjsoncpp-7.0.lib" "vtklibxml2-7.0.lib" "vtkmetaio-7.0.lib" "vtkNetCDF-7.0.lib" "vtkNetCDF_cxx-7.0.lib" "vtkoggtheora-7.0.lib" "vtkParallelCore-7.0.lib" "vtkpng-7.0.lib" "vtkproj4-7.0.lib" "vtkRenderingAnnotation-7.0.lib" "vtkRenderingContext2D-7.0.lib" "vtkRenderingContextOpenGL2-7.0.lib" "vtkRenderingCore-7.0.lib" "vtkRenderingFreeType-7.0.lib" "vtkRenderingImage-7.0.lib" "vtkRenderingLabel-7.0.lib" "vtkRenderingLOD-7.0.lib" "vtkRenderingOpenGL2-7.0.lib" "vtkRenderingVolume-7.0.lib" "vtkRenderingVolumeOpenGL2-7.0.lib" "vtksqlite-7.0.lib" "vtksys-7.0.lib" "vtktiff-7.0.lib" "vtkverdict-7.0.lib" "vtkViewsContext2D-7.0.lib" "vtkViewsCore-7.0.lib" "vtkViewsInfovis-7.0.lib" "vtkzlib-7.0.lib" "vtkGUISupportQt-7.0.lib" "vtkRenderingQt-7.0.lib" "vtkViewsQt-7.0.lib" flann_cpp_s.lib qhullstatic.lib OpenNI2.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib comctl32.lib wsock32.lib glu32.lib opengl32.lib ws2_32.lib Psapi.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\PCLDLL.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"E:\712雷达\712相关文件\712应用版源码\712应用版源码\712应用版源码\（v4）PCLDLL\Debug\PCLDLL.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"..\Debug\PCLDLL.lib" /MACHINE:X86 /DLL Debug\PCLDLL.dll.embed.manifest.res
+         Debug\dllmain.obj
+         Debug\PCLDLL.obj
+         Debug\stdafx.obj
+     1>LINK : fatal error LNK1104: 无法打开文件“pcl_ml_release.lib”
+     1>已完成生成项目“E:\712雷达\712相关文件\712应用版源码\712应用版源码\712应用版源码\（v4）PCLDLL\PCLDLL\PCLDLL.vcxproj”(rebuild 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:39.75

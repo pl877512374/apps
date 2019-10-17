@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="NavigateLaser.Views.TopMenuView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"             
+             mc:Ignorable="d" 
+             d:DesignHeight="30" d:DesignWidth="300" IsEnabled="{Binding TopMenuM.IsEnable}">
+    <Grid>
+        <Menu  HorizontalAlignment="Stretch" Name="menu1" VerticalAlignment="Stretch" FontSize="14">
+            <MenuItem Header="登录" Margin="2.5" Height="25">
+                <MenuItem Header="{Binding TopMenuM.SubMenuName}" Command="{Binding LoginCommand}"></MenuItem>
+            </MenuItem>
+        </Menu>
+    </Grid>
+</UserControl>

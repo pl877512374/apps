@@ -1,0 +1,147 @@
+﻿生成启动时间为 2019/9/11 14:34:00。
+     1>项目“E:\712导航雷达\712相关文件\712应用版源码\发布2.0\应用版0911\（v4）PCLDLL\PCLDLL\PCLDLL.vcxproj”在节点 3 上(Rebuild 个目标)。
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(299,5): warning MSB8004: Output 目录未以斜杠结尾。此生成实例将添加斜杠，因为必须有这个斜杠才能正确计算 Output 目录。
+     1>ClCompile:
+         d:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /Od /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D PCLDLL_EXPORTS /D _WINDLL /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yc"StdAfx.h" /Fp"Release\PCLDLL.pch" /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         d:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /Od /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D PCLDLL_EXPORTS /D _WINDLL /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt dllmain.cpp
+         dllmain.cpp
+         d:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /Od /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D PCLDLL_EXPORTS /D _WINDLL /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt PCLDLL.cpp
+         PCLDLL.cpp
+     1>D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/point_traits.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/point_cloud.h(1021): warning C4521: “pcl::PointCloud<Eigen::MatrixXf>”: 指定了多个复制构造函数
+     1>D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/point_traits.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/impl/point_types.hpp(1008): warning C4996: 'pcl::SHOT': USE SHOT352 FOR SHAPE AND SHOT1344 FOR SHAPE+COLOR INSTEAD
+                 D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/impl/point_types.hpp(1003) : 参见“pcl::SHOT”的声明
+     1>D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/impl/point_types.hpp(1009): warning C4996: 'pcl::SHOT': USE SHOT352 FOR SHAPE AND SHOT1344 FOR SHAPE+COLOR INSTEAD
+                 D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/impl/point_types.hpp(1003) : 参见“pcl::SHOT”的声明
+     1>D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/impl/point_types.hpp(1012): warning C4996: 'pcl::SHOT::rf': USE SHOT352 FOR SHAPE AND SHOT1344 FOR SHAPE+COLOR INSTEAD
+                 D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/impl/point_types.hpp(1005) : 参见“pcl::SHOT::rf”的声明
+     1>D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/impl/point_types.hpp(1013): warning C4996: 'pcl::SHOT::descriptor': USE SHOT352 FOR SHAPE AND SHOT1344 FOR SHAPE+COLOR INSTEAD
+                 D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/impl/point_types.hpp(1004) : 参见“pcl::SHOT::descriptor”的声明
+     1>D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/impl/point_types.hpp(1014): warning C4996: 'pcl::SHOT::descriptor': USE SHOT352 FOR SHAPE AND SHOT1344 FOR SHAPE+COLOR INSTEAD
+                 D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/impl/point_types.hpp(1004) : 参见“pcl::SHOT::descriptor”的声明
+     1>D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/impl/point_types.hpp(1014): warning C4996: 'pcl::SHOT::descriptor': USE SHOT352 FOR SHAPE AND SHOT1344 FOR SHAPE+COLOR INSTEAD
+                 D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/impl/point_types.hpp(1004) : 参见“pcl::SHOT::descriptor”的声明
+     1>D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/point_traits.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/point_traits.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/point_representation.h(445): warning C4996: 'pcl::SHOT': USE SHOT352 FOR SHAPE AND SHOT1344 FOR SHAPE+COLOR INSTEAD
+                 D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/impl/point_types.hpp(1003) : 参见“pcl::SHOT”的声明
+     1>D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/point_representation.h(446): warning C4996: 'pcl::SHOT': USE SHOT352 FOR SHAPE AND SHOT1344 FOR SHAPE+COLOR INSTEAD
+                 D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/impl/point_types.hpp(1003) : 参见“pcl::SHOT”的声明
+     1>D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/point_representation.h(449): warning C4996: 'pcl::DefaultPointRepresentation<pcl::SHOT>': SHOT POINT IS DEPRECATED, USE SHOT352 FOR SHAPE AND SHOT1344 FOR SHAPE+COLOR INSTEAD
+                 D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/point_representation.h(446) : 参见“pcl::DefaultPointRepresentation<pcl::SHOT>”的声明
+     1>D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/point_representation.h(455): warning C4996: 'pcl::SHOT': USE SHOT352 FOR SHAPE AND SHOT1344 FOR SHAPE+COLOR INSTEAD
+                 D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/impl/point_types.hpp(1003) : 参见“pcl::SHOT”的声明
+     1>D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/point_representation.h(458): warning C4996: 'pcl::SHOT::descriptor': USE SHOT352 FOR SHAPE AND SHOT1344 FOR SHAPE+COLOR INSTEAD
+                 D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/impl/point_types.hpp(1004) : 参见“pcl::SHOT::descriptor”的声明
+     1>D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/point_representation.h(460): warning C4996: 'pcl::DefaultPointRepresentation<pcl::SHOT>::~DefaultPointRepresentation': SHOT POINT IS DEPRECATED, USE SHOT352 FOR SHAPE AND SHOT1344 FOR SHAPE+COLOR INSTEAD
+                 D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/point_representation.h(460) : 编译器已在此处生成“pcl::DefaultPointRepresentation<pcl::SHOT>::~DefaultPointRepresentation”
+                 此诊断出现在编译器生成的函数“void *pcl::DefaultPointRepresentation<pcl::SHOT>::__delDtor(unsigned int)”中
+     1>D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/point_representation.h(460): warning C4996: 'pcl::DefaultPointRepresentation<pcl::SHOT>::~DefaultPointRepresentation': SHOT POINT IS DEPRECATED, USE SHOT352 FOR SHAPE AND SHOT1344 FOR SHAPE+COLOR INSTEAD
+                 D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/point_representation.h(460) : 编译器已在此处生成“pcl::DefaultPointRepresentation<pcl::SHOT>::~DefaultPointRepresentation”
+                 此诊断出现在编译器生成的函数“void *pcl::DefaultPointRepresentation<pcl::SHOT>::__delDtor(unsigned int)”中
+     1>D:\Program Files (x86)\PCL 1.6.0\3rdParty\FLANN\include\flann/util/logger.h(66): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(234) : 参见“fopen”的声明
+     1>D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/point_cloud.h(603): warning C4521: “pcl::PointCloud<PointT>”: 指定了多个复制构造函数
+                 with
+                 [
+                     PointT=pcl::PointXYZ
+                 ]
+                 D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/visualization/pcl_visualizer.h(501): 参见对正在编译的类 模板 实例化“pcl::PointCloud<PointT>”的引用
+                 with
+                 [
+                     PointT=pcl::PointXYZ
+                 ]
+     1>D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/point_cloud.h(603): warning C4521: “pcl::PointCloud<PointT>”: 指定了多个复制构造函数
+                 with
+                 [
+                     PointT=pcl::Normal
+                 ]
+                 D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/visualization/pcl_visualizer.h(502): 参见对正在编译的类 模板 实例化“pcl::PointCloud<PointT>”的引用
+                 with
+                 [
+                     PointT=pcl::Normal
+                 ]
+     1>D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/point_cloud.h(603): warning C4521: “pcl::PointCloud<PointT>”: 指定了多个复制构造函数
+                 with
+                 [
+                     PointT=pcl::PrincipalCurvatures
+                 ]
+                 D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/visualization/pcl_visualizer.h(503): 参见对正在编译的类 模板 实例化“pcl::PointCloud<PointT>”的引用
+                 with
+                 [
+                     PointT=pcl::PrincipalCurvatures
+                 ]
+     1>D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/point_cloud.h(603): warning C4521: “pcl::PointCloud<PointT>”: 指定了多个复制构造函数
+                 with
+                 [
+                     PointT=pcl::PointXYZRGB
+                 ]
+                 D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/visualization/pcl_visualizer.h(724): 参见对正在编译的类 模板 实例化“pcl::PointCloud<PointT>”的引用
+                 with
+                 [
+                     PointT=pcl::PointXYZRGB
+                 ]
+     1>D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/point_cloud.h(603): warning C4521: “pcl::PointCloud<PointT>”: 指定了多个复制构造函数
+                 with
+                 [
+                     PointT=pcl::PointXYZRGBA
+                 ]
+                 D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/visualization/pcl_visualizer.h(737): 参见对正在编译的类 模板 实例化“pcl::PointCloud<PointT>”的引用
+                 with
+                 [
+                     PointT=pcl::PointXYZRGBA
+                 ]
+     1>D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/visualization/impl/pcl_visualizer.hpp(1655): warning C4101: “LaserAngle”: 未引用的局部变量
+     1>PCLDLL.cpp(849): warning C4018: “<”: 有符号/无符号不匹配
+     1>PCLDLL.cpp(861): warning C4018: “<”: 有符号/无符号不匹配
+     1>PCLDLL.cpp(880): warning C4018: “<”: 有符号/无符号不匹配
+     1>PCLDLL.cpp(892): warning C4018: “<”: 有符号/无符号不匹配
+     1>PCLDLL.cpp(911): warning C4018: “<”: 有符号/无符号不匹配
+     1>PCLDLL.cpp(923): warning C4018: “<”: 有符号/无符号不匹配
+     1>PCLDLL.cpp(952): warning C4101: “newPickPoint”: 未引用的局部变量
+     1>PCLDLL.cpp(1141): warning C4018: “<”: 有符号/无符号不匹配
+     1>PCLDLL.cpp(1157): warning C4018: “<”: 有符号/无符号不匹配
+     1>PCLDLL.cpp(1628): warning C4018: “<”: 有符号/无符号不匹配
+     1>PCLDLL.cpp(1885): warning C4018: “<”: 有符号/无符号不匹配
+     1>D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/visualization/impl/pcl_visualizer.hpp(1732): warning C4018: “<”: 有符号/无符号不匹配
+                 PCLDLL.cpp(1871): 参见对正在编译的函数 模板 实例化“bool pcl::visualization::PCLVisualizer::addPolyLine<pcl::PointXYZRGB>(const boost::shared_ptr<T> &,double,double,double,const std::string &,int)”的引用
+                 with
+                 [
+                     T=const pcl::PointCloud<pcl::PointXYZRGB>
+                 ]
+     1>D:\Program Files (x86)\PCL 1.6.0\3rdParty\FLANN\include\flann/flann.hpp(78): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(234) : 参见“fopen”的声明
+                 D:\Program Files (x86)\PCL 1.6.0\3rdParty\FLANN\include\flann/flann.hpp(114): 参见对正在编译的函数 模板 实例化“flann::NNIndex<Distance> *flann::load_saved_index<Distance>(const flann::Matrix<T> &,const std::string &,Distance)”的引用
+                 with
+                 [
+                     Distance=flann::L2_Simple<float>,
+                     T=float
+                 ]
+                 D:\Program Files (x86)\PCL 1.6.0\3rdParty\FLANN\include\flann/flann.hpp(107): 编译类 模板 成员函数“flann::Index<Distance>::Index(const flann::Matrix<T> &,const flann::IndexParams &,Distance)”时
+                 with
+                 [
+                     Distance=flann::L2_Simple<float>,
+                     T=float
+                 ]
+                 D:\Program Files (x86)\PCL 1.6.0\include\pcl-1.6\pcl/kdtree/kdtree_flann.h(377): 参见对正在编译的类 模板 实例化“flann::Index<Distance>”的引用
+                 with
+                 [
+                     Distance=flann::L2_Simple<float>
+                 ]
+       Link:
+         d:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"..\..\（v8）NavigateLaser\NavigateLaser\bin\Release\PCLDLL.dll" /INCREMENTAL:NO /NOLOGO opengl32.lib pcl_kdtree_release.lib pcl_io_release.lib pcl_search_release.lib pcl_segmentation_release.lib pcl_apps_release.lib pcl_features_release.lib pcl_filters_release.lib pcl_visualization_release.lib pcl_common_release.lib flann_cpp_s.lib flann.lib flann_cuda_s.lib flann_s.lib "libboost_system-vc100-mt-1_47.lib" "libboost_filesystem-vc100-mt-1_47.lib" "libboost_thread-vc100-mt-1_47.lib" "libboost_date_time-vc100-mt-1_47.lib" "libboost_iostreams-vc100-mt-1_47.lib" vtkalglib.lib vtkCharts.lib vtkCommon.lib vtkDICOMParser.lib vtkexoIIc.lib vtkexpat.lib vtkFiltering.lib vtkfreetype.lib vtkftgl.lib vtkGenericFiltering.lib vtkGeovis.lib vtkGraphics.lib vtkhdf5.lib vtkHybrid.lib vtkImaging.lib vtkInfovis.lib vtkIO.lib vtkjpeg.lib vtklibxml2.lib vtkmetaio.lib vtkNetCDF.lib vtkNetCDF_cxx.lib vtkpng.lib vtkproj4.lib vtkRendering.lib vtksqlite.lib vtksys.lib vtktiff.lib vtkverdict.lib vtkViews.lib vtkVolumeRendering.lib vtkWidgets.lib vtkzlib.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Release\PCLDLL.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"E:\712导航雷达\712相关文件\712应用版源码\发布2.0\应用版0911\（v8）NavigateLaser\NavigateLaser\bin\Release\PCLDLL.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"..\..\（v8）NavigateLaser\NavigateLaser\bin\Release\PCLDLL.lib" /MACHINE:X86 /DLL Release\dllmain.obj
+         Release\PCLDLL.obj
+         Release\stdafx.obj
+            正在创建库 ..\..\（v8）NavigateLaser\NavigateLaser\bin\Release\PCLDLL.lib 和对象 ..\..\（v8）NavigateLaser\NavigateLaser\bin\Release\PCLDLL.exp
+         正在生成代码
+         已完成代码的生成
+         PCLDLL.vcxproj -> E:\712导航雷达\712相关文件\712应用版源码\发布2.0\应用版0911\（v4）PCLDLL\PCLDLL\..\..\（v8）NavigateLaser\NavigateLaser\bin\Release\PCLDLL.dll
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"..\..\（v8）NavigateLaser\NavigateLaser\bin\Release\PCLDLL.dll;#2" /manifest Release\PCLDLL.dll.intermediate.manifest
+     1>已完成生成项目“E:\712导航雷达\712相关文件\712应用版源码\发布2.0\应用版0911\（v4）PCLDLL\PCLDLL\PCLDLL.vcxproj”(Rebuild 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:28.32

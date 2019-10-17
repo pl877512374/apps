@@ -1,0 +1,64 @@
+﻿<UserControl x:Class="NavigateLaser.Views.ScanInfoView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:Interactivity="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:Interaction="http://schemas.microsoft.com/expression/2010/interactions"
+             mc:Ignorable="d" 
+             d:DesignHeight="400" d:DesignWidth="870" IsEnabled="{Binding ScanInfoM.IsEnable}" FontSize="14">
+    <Grid>
+        <Button Content="{Binding ScanInfoM.BtConnectTXT}" Height="25" HorizontalAlignment="Left" Margin="252,12,0,0" Name="button1" VerticalAlignment="Top" Width="95" Command="{Binding SendContinuousFrameCommand}" IsEnabled="{Binding ScanInfoM.BtIsEnable}"/>
+        <GroupBox Header="激光器位置" Background="#00000000" Height="240" HorizontalAlignment="Left" Margin="208,43,0,0" Name="groupBox1" VerticalAlignment="Top" Width="180">
+            <Grid>
+                <TextBox Text="{Binding ScanInfoM.SelfAngle}" IsReadOnly="True" Height="25" HorizontalAlignment="Left" Margin="94,52,0,0" Name="textBox1" VerticalAlignment="Top" Width="55" />
+                <Label Content="方向角(deg)" Height="30" HorizontalAlignment="Left" Margin="3,52,0,0" Name="label6" VerticalAlignment="Top" />
+                <TextBox Text="{Binding ScanInfoM.SelfX}" IsReadOnly="True" Height="25" HorizontalAlignment="Left" Margin="94,87,0,0" Name="textBox2" VerticalAlignment="Top" Width="55" />
+                <Label Content="X坐标(mm)" Height="25" HorizontalAlignment="Left" Margin="7,87,0,0" Name="label7" VerticalAlignment="Top" />
+                <TextBox Text="{Binding ScanInfoM.SelfY}" IsReadOnly="True" Height="25" HorizontalAlignment="Left" Margin="94,123,0,0" Name="textBox3" VerticalAlignment="Top" Width="55" />
+                <Label Content="Y坐标(mm)" Height="25" HorizontalAlignment="Left" Margin="8,123,0,0" Name="label8" VerticalAlignment="Top" />
+                <Label Content="有效标志" Height="25" HorizontalAlignment="Left" Margin="24,17,0,0" Name="label9" VerticalAlignment="Top" />
+                <TextBox Text="{Binding ScanInfoM.ValidFlag}" IsReadOnly="True" Height="25" HorizontalAlignment="Left" Margin="94,17,0,0" Name="textBox4" VerticalAlignment="Top" Width="55" />
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="扫描数据信息" Background="#00000000" Height="240" HorizontalAlignment="Left" Margin="10,43,0,0" Name="groupBox2" VerticalAlignment="Top" Width="190">
+            <Grid>
+                <TextBox Text="{Binding ScanInfoM.StatisticalFrameCount}" Height="25" HorizontalAlignment="Left" Margin="110,18,0,0" Name="txtFrameCount" VerticalAlignment="Top" Width="55" />
+                <TextBox Text="{Binding ScanInfoM.PointSequenceNum}" Height="25" HorizontalAlignment="Left" Margin="110,55,0,0" Name="txtPointNum" VerticalAlignment="Top" Width="55" />
+                <TextBox Text="{Binding ScanInfoM.StatisticalMAX}" IsReadOnly="True" Height="25" HorizontalAlignment="Left" Margin="110,91,0,0" Name="txtMAX" VerticalAlignment="Top" Width="55" />
+                <TextBox Text="{Binding ScanInfoM.StatisticalMIN}" IsReadOnly="True" Height="25" HorizontalAlignment="Left" Margin="110,127,0,0" Name="txtMIN" VerticalAlignment="Top" Width="55" />
+                <TextBox Text="{Binding ScanInfoM.StatisticalAVG}" IsReadOnly="True" Height="25" HorizontalAlignment="Left" Margin="110,164,0,0" Name="txtAVG" VerticalAlignment="Top" Width="55" />
+                <Label Content="单次统计包数" Height="25" HorizontalAlignment="Left" Margin="13,18,0,0" Name="label1" VerticalAlignment="Top" />
+                <Label Content="统计点序号" Height="25" HorizontalAlignment="Left" Margin="27,55,0,0" Name="label2" VerticalAlignment="Top" />
+                <Label Content="最大值(mm)" Height="25" HorizontalAlignment="Left" Margin="19,91,0,0" Name="label3" VerticalAlignment="Top" />
+                <Label Content="最小值(mm)" Height="25" HorizontalAlignment="Left" Margin="19,127,0,0" Name="label4" VerticalAlignment="Top" />
+                <Label Content="平均值(mm)" Height="25" HorizontalAlignment="Left" Margin="19,163,0,0" Name="label5" VerticalAlignment="Top" />
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="靶标信息" Background="#00000000" Height="240" HorizontalAlignment="Left" Margin="398,43,0,0" Name="groupBox3" VerticalAlignment="Top" Width="240">
+            <Grid>
+                <DataGrid AutoGenerateColumns="False" Height="185" HorizontalAlignment="Left" Margin="0,32,0,0" Name="dataGrid1" VerticalAlignment="Top" Width="228"
+                          SelectedItem="{Binding ScanInfoM.CurrentSelectItem}" ItemsSource="{Binding ScanInfoM.MarkInfoMenu}" HeadersVisibility="Column" CanUserAddRows="False" CanUserDeleteRows="False" IsReadOnly="True">
+                    <DataGrid.ColumnHeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                        </Style>
+                    </DataGrid.ColumnHeaderStyle>
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="序号" Binding="{Binding MarkNo}" Width="50" />
+                        <DataGridTextColumn Header="X坐标(mm)" Binding="{Binding MarkX}" Width="85" />
+                        <DataGridTextColumn Header="Y坐标(mm)" Binding="{Binding MarkY}" Width="85" />
+                    </DataGrid.Columns>
+                    <Interactivity:Interaction.Triggers>
+                        <Interactivity:EventTrigger EventName="SelectionChanged">
+                            <Interactivity:InvokeCommandAction Command="{Binding Path=DataContext.SelectionChangedCommand, RelativeSource={RelativeSource Mode=FindAncestor, 
+                                        AncestorType={x:Type DataGrid}}}" CommandParameter="{Binding ScanInfoM.CurrentSelectItem}"/>
+                        </Interactivity:EventTrigger>
+                    </Interactivity:Interaction.Triggers>
+                </DataGrid>
+                <TextBox Text="{Binding ScanInfoM.LMTotal}" IsReadOnly="True"  Height="23" HorizontalAlignment="Left" Margin="103,6,0,0" Name="txtLMtotal" VerticalAlignment="Top" Width="78" />
+                <Label Content="靶标总数" Height="25" HorizontalAlignment="Left" Margin="28,5,0,0" Name="label10" VerticalAlignment="Top" />
+            </Grid>
+        </GroupBox>
+    </Grid>
+</UserControl>

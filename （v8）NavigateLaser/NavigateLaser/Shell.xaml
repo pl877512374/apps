@@ -1,0 +1,54 @@
+﻿<Window x:Class="NavigateLaser.Shell"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:regions="clr-namespace:Microsoft.Practices.Prism.Regions;assembly=Microsoft.Practices.Prism" 
+        Title="万集Laser V2.5.3" Height="650" Width="900" Icon="/NavigateLaser;component/Image/2.ico" >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <ContentControl regions:RegionManager.RegionName="TopMenuWin" Grid.Row="0" MinHeight="30">          
+        </ContentControl>
+        
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="195" ></ColumnDefinition> 
+                <ColumnDefinition Width="5" ></ColumnDefinition>
+                <ColumnDefinition Width="*" ></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="35*" />
+                    <RowDefinition Height="65*" />
+                </Grid.RowDefinitions>
+                <ScrollViewer x:Name="scr3" Margin="0" VerticalScrollBarVisibility="Auto" >
+                    <ContentControl regions:RegionManager.RegionName="MenuWin" Grid.Row="0">
+                    </ContentControl>
+                </ScrollViewer>
+                
+                <ContentControl regions:RegionManager.RegionName="NetWin" Grid.Row="1">
+                </ContentControl>
+            </Grid>
+
+            <Grid Grid.Column="1" Background="#F5F5F5"></Grid>
+
+            <Grid Grid.Row="0" Grid.Column="2" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="75*" MinHeight="100"/>
+                    <RowDefinition Height="25*" MinHeight="100"/>
+                </Grid.RowDefinitions>
+                <ScrollViewer x:Name="scr1" Margin="0" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+                    <ContentControl regions:RegionManager.RegionName="ParaWin" Grid.Row="0">               
+                    </ContentControl>
+                </ScrollViewer>
+                <ScrollViewer x:Name="scr2" Margin="0" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Grid.Row="1">
+                    <ContentControl regions:RegionManager.RegionName="LMWin" Grid.Row="1">
+                    </ContentControl>
+                </ScrollViewer>
+                <GridSplitter Height="5" HorizontalAlignment="Stretch" VerticalAlignment="Top" Background="LightGray" Grid.Row="1"></GridSplitter>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

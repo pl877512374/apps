@@ -1,0 +1,31 @@
+﻿<Window x:Class="NavigateLaser.Views.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="登录界面" Height="211" Width="310" Background="Transparent" WindowStyle="None" AllowsTransparency="True" FontSize="14">
+    <Grid> 
+        <DockPanel>
+            <Grid DockPanel.Dock="Bottom" Height="25" Background="Transparent">
+                <Border BorderThickness="1" BorderBrush="#00000000"  CornerRadius="0,0,10,10" Background="LightBlue" >
+                    <TextBlock Text="{Binding LoginWindowM.TipContentTXT}"  Name="textBlock1" TextAlignment="Center" VerticalAlignment="Center"/>
+                </Border>
+            </Grid>        
+            <Grid>
+                <Border BorderThickness="1" BorderBrush="LightBlue"  CornerRadius="10,10,0,0" Background="LightBlue" >
+                    <Grid>
+                        <Button Content="关闭" Height="25" HorizontalAlignment="Left" Margin="188,134,0,0" Name="btClose" VerticalAlignment="Top" Width="75" Command="{Binding CloseWinCommand}" />
+                        <Button Content="{Binding LoginWindowM.BtLoginTXT}" Height="25" HorizontalAlignment="Left" Margin="95,134,0,0" Name="btLogin" VerticalAlignment="Top" Width="75" 
+                                Command="{Binding AuthenticationCommand}" CommandParameter="{Binding ElementName=passwordBox1}" IsDefault="True" />
+                        <TextBox Text="{Binding LoginWindowM.LoginID}"  Height="25" HorizontalAlignment="Left" Margin="143,50,0,0" Name="txtID" 
+                                 VerticalAlignment="Top" Width="120" Padding="0" IsReadOnly="True">    
+                        </TextBox>
+                        <PasswordBox Height="25" HorizontalAlignment="Left" Margin="143,89,0,0" Name="passwordBox1" VerticalAlignment="Top" Width="120" />
+                        <Label Content="用户名" Height="28" HorizontalAlignment="Left" Margin="93,48,0,0" Name="label1" VerticalAlignment="Top" />
+                        <Label Content="密码" Height="28" HorizontalAlignment="Left" Margin="107,86,0,0" Name="label2" VerticalAlignment="Top" />
+                        <Image Source="../Image/1.png" Height="78" HorizontalAlignment="Left" Margin="15,49,0,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="72" />
+                    </Grid>
+                </Border>
+            </Grid>
+        </DockPanel>
+        
+    </Grid>
+</Window>

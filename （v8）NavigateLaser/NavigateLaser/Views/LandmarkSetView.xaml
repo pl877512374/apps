@@ -1,0 +1,134 @@
+﻿<UserControl x:Class="NavigateLaser.Views.LandmarkSetView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:Interactivity="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:Interaction="http://schemas.microsoft.com/expression/2010/interactions"
+             mc:Ignorable="d" 
+             d:DesignHeight="380" d:DesignWidth="850" IsEnabled="{Binding LandmarkSetM.IsEnable}" FontSize="14">
+    <TabControl Margin="0,0,-328,0">
+        <TabItem Header="靶标设置">
+            <Grid Margin="0,0,14,0">
+                <Button Content="设置信息" Height="23" HorizontalAlignment="Left" Margin="697,115,0,0" Name="btSendLandmark" 
+                        VerticalAlignment="Top" Width="120" Command="{Binding SendLandmarkCommand}" IsEnabled="{Binding LandmarkSetM.IsDGEnable}"/>
+                <GroupBox Header="靶标信息" Background="#00000000"  Height="342" HorizontalAlignment="Left" Margin="1,2,0,0" Name="groupBox2" VerticalAlignment="Top" Width="510" >
+                    <Grid>
+                        <DataGrid AutoGenerateColumns="False" Height="273" HorizontalAlignment="Left" Name="dataGrid1" VerticalAlignment="Top" Width="490" SelectedItem="{Binding LandmarkSetM.CurrentSelectItem}"
+                          ItemsSource="{Binding LandmarkSetM.LandmarkMenu}" HeadersVisibility="Column" CanUserAddRows="False" CanUserDeleteRows="False" Margin="4,39,0,0" ToolTip="请先选择行，再进行有关操作" IsEnabled="{Binding LandmarkSetM.IsDGEnable}">
+                            <DataGrid.ColumnHeaderStyle>
+                                <Style TargetType="DataGridColumnHeader">
+                                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                                </Style>
+                            </DataGrid.ColumnHeaderStyle>
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="ID" Binding="{Binding No}" IsReadOnly="True"  Width="50" />
+                                <DataGridTextColumn Header="X坐标(mm)" Binding="{Binding LandmarkX, UpdateSourceTrigger=PropertyChanged}" Width="85" />
+                                <DataGridTextColumn Header="Y坐标(mm)" Binding="{Binding LandmarkY, UpdateSourceTrigger=PropertyChanged}" Width="85" />
+                                <DataGridTextColumn Header="层ID" Binding="{Binding LayerID, UpdateSourceTrigger=PropertyChanged}" Width="40" />
+                                <DataGridTemplateColumn Header="圆柱" SortMemberPath="IsCyclinder" Width="40">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <CheckBox IsChecked="{Binding Path=IsCyclinder, UpdateSourceTrigger=PropertyChanged}"
+                                                VerticalAlignment="Center" HorizontalAlignment="Center" IsEnabled="{Binding IsCylinderCheckEnable}"
+                                                Command="{Binding Path=DataContext.ShapeChangeCommand, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type DataGrid}}}" 
+                                                CommandParameter="{Binding Path=DataContext.LandmarkSetM.CurrentSelectItem, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type DataGrid}}}"/>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTextColumn Header="尺寸(mm)" Binding="{Binding LandmarkShapeSize, UpdateSourceTrigger=PropertyChanged}" Width="80" />
+                                <DataGridTemplateColumn Header="选中" SortMemberPath="IsSelected" Width="40">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <CheckBox IsChecked="{Binding Path=IsSelected, UpdateSourceTrigger=PropertyChanged}"
+                                                VerticalAlignment="Center" HorizontalAlignment="Center"  IsEnabled="{Binding IsSelectedCheckEnable}"
+                                                Command="{Binding Path=DataContext.SelectMenuItemCommand, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type DataGrid}}}" 
+                                                CommandParameter="{Binding Path=DataContext.LandmarkSetM.CurrentSelectItem, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type DataGrid}}}"/>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTemplateColumn Header="操作" Width="50">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <Button Content="删除" IsEnabled="{Binding IsBtEnable}"  Command="{Binding Path=DataContext.DeleteCommand, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type DataGrid}}}" 
+                                             CommandParameter="{Binding No}"/>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                            </DataGrid.Columns>
+                            <Interactivity:Interaction.Triggers>
+                                <Interactivity:EventTrigger EventName="SelectionChanged">
+                                    <Interactivity:InvokeCommandAction Command="{Binding Path=DataContext.SelectionChangedCommand, RelativeSource={RelativeSource Mode=FindAncestor, 
+                                        AncestorType={x:Type DataGrid}}}" CommandParameter="{Binding LandmarkSetM.CurrentSelectItem}"/>
+                                </Interactivity:EventTrigger>
+                                <Interactivity:EventTrigger EventName="BeginningEdit">
+                                    <Interactivity:InvokeCommandAction Command="{Binding BeginningEditCommand}" CommandParameter="{Binding LandmarkSetM.CurrentSelectItem}"/>
+                                </Interactivity:EventTrigger>
+                                <Interactivity:EventTrigger EventName="CellEditEnding">
+                                    <Interactivity:InvokeCommandAction Command="{Binding CellEditEndingCommand}" CommandParameter="{Binding LandmarkSetM.CurrentSelectItem}"/>
+                                </Interactivity:EventTrigger>
+                            </Interactivity:Interaction.Triggers>
+                        </DataGrid>
+                        <Label Content="靶标总数" Height="28" HorizontalAlignment="Left" Margin="179,6,0,0" Name="label2" VerticalAlignment="Top" />
+                        <TextBox Text="{Binding LandmarkSetM.StatisticsLMTotal}" Height="23" HorizontalAlignment="Left" Margin="263,9,0,0" Name="textBox2" VerticalAlignment="Top" Width="80" />
+                    </Grid>
+                </GroupBox>
+                <Button Content="查询信息" Height="23" HorizontalAlignment="Left" Margin="697,82,0,0" Name="btGetLandmarkInfo" VerticalAlignment="Top" Width="120" Command="{Binding GetLandmarkInfoCommand}" IsEnabled="{Binding LandmarkSetM.IsDGEnable}"/>
+                <Button Content="导入文件靶标信息" Height="23" HorizontalAlignment="Left" Margin="697,16,0,0" Name="btImportLandmark" VerticalAlignment="Top" Width="120" Command="{Binding ImportLandmarkCommand}" IsEnabled="{Binding LandmarkSetM.IsDGEnable}"/>
+                <Button Content="导出选中靶标信息" Height="23" HorizontalAlignment="Left" Margin="697,49,0,0" Name="btExportLandmark" VerticalAlignment="Top" Width="120" Command="{Binding ExportLandmarkCommand}" IsEnabled="{Binding LandmarkSetM.IsDGEnable}"/>
+                <GroupBox Header="层信息" Background="#00000000" Height="200" HorizontalAlignment="Left" Margin="518,3,0,0" Name="groupBox1" VerticalAlignment="Top" Width="160">
+                    <Grid>
+                        <DataGrid AutoGenerateColumns="False" Height="130" HorizontalAlignment="Left" Margin="4,41,0,0" Name="dataGrid2" VerticalAlignment="Top" Width="140" HeadersVisibility="Column"
+                                  CanUserAddRows="False" CanUserDeleteRows="False" ItemsSource="{Binding LandmarkSetM.LandmarkLayerInfoMenu}" >
+                            <DataGrid.ColumnHeaderStyle>
+                                <Style TargetType="DataGridColumnHeader">
+                                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                                </Style>
+                            </DataGrid.ColumnHeaderStyle>
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="层ID" Binding="{Binding ID}" IsReadOnly="True"  Width="50" />
+                                <DataGridTextColumn Header="靶标个数" Binding="{Binding LandmarkTotal}" IsReadOnly="True" Width="70" />
+                            </DataGrid.Columns>
+                            <Interactivity:Interaction.Triggers>
+                                <Interactivity:EventTrigger EventName="SelectionChanged">
+                                    <Interactivity:InvokeCommandAction Command="{Binding LayerSelectionChangedCommand}" CommandParameter="{Binding SelectedItems,ElementName=dataGrid2}"/>
+                                </Interactivity:EventTrigger>
+                            </Interactivity:Interaction.Triggers>
+                        </DataGrid>
+                        <TextBox Text="{Binding LandmarkSetM.StatisticsLayerTotal}" Height="23" HorizontalAlignment="Left" Margin="75,10,0,0" Name="textBox1" VerticalAlignment="Top" Width="65" />
+                        <Label Content="靶标层数" Height="28" HorizontalAlignment="Left" Margin="5,7,0,0" Name="label1" VerticalAlignment="Top" />
+                    </Grid>
+                </GroupBox>
+                <GroupBox Header="靶标旋转变换" Background="#00000000" Height="200" HorizontalAlignment="Left" Margin="843,10,0,0" Name="groupBox3" VerticalAlignment="Top" Width="152">
+                    <Grid>
+                        <TextBox Text="{Binding LandmarkSetM.RotationAngle}" Height="23" HorizontalAlignment="Left" Margin="68,15,0,0" Name="textBox3" VerticalAlignment="Top" Width="66" 
+                                 ToolTip="逆时针旋转角度取正"/>
+                        <TextBox Text="{Binding LandmarkSetM.RotationX}" Height="23" HorizontalAlignment="Left" Margin="68,58,0,0" Name="textBox4" VerticalAlignment="Top" Width="66" />
+                        <TextBox Text="{Binding LandmarkSetM.RotationY}" Height="23" HorizontalAlignment="Left" Margin="68,102,0,0" Name="textBox5" VerticalAlignment="Top" Width="66" />
+                        <Label  Height="45" HorizontalAlignment="Left" Margin="7,5,0,0" Name="label3" VerticalAlignment="Top" Width="60">
+                            <TextBlock TextWrapping="Wrap" Text="旋转角(mdeg)"/>
+                        </Label>
+                        <Label Height="45" HorizontalAlignment="Left" Margin="7,50,0,0" Name="label4" VerticalAlignment="Top" Width="65">
+                            <TextBlock TextWrapping="Wrap" Text="旋转轴X(mm)"/>
+                        </Label>
+                        <Label Height="45" HorizontalAlignment="Left" Margin="7,95,0,0" Name="label5" VerticalAlignment="Top" Width="65" >
+                            <TextBlock TextWrapping="Wrap" Text="旋转轴Y(mm)"/>
+                        </Label>
+                        <Button Content="旋转" Height="23" HorizontalAlignment="Left" Margin="33,142,0,0" Name="button1" VerticalAlignment="Top" Width="75" 
+                                Command="{Binding RotationLMCommand}" IsEnabled="{Binding LandmarkSetM.IsDGEnable}"/>
+                    </Grid>
+                </GroupBox>
+                <GroupBox Header="靶标平移变换(mm)" Background="#00000000" Height="141" HorizontalAlignment="Left" Margin="1000,10,0,0" Name="groupBox4" VerticalAlignment="Top" Width="157">
+                    <Grid>
+                        <Label Content="平移量X" Height="28" HorizontalAlignment="Left" Margin="7,9,0,0" Name="label6" VerticalAlignment="Top" Width="65" />
+                        <Label Content="平移量Y" Height="28" HorizontalAlignment="Left" Margin="7,45,0,0" Name="label7" VerticalAlignment="Top" Width="65" />
+                        <Button Content="平移" Height="23" HorizontalAlignment="Left" Margin="33,82,0,0" Name="button2" VerticalAlignment="Top" Width="75" 
+                                Command="{Binding TranslationLMCommand}" IsEnabled="{Binding LandmarkSetM.IsDGEnable}" />
+                        <TextBox Text="{Binding LandmarkSetM.TranslationX}" Height="23" HorizontalAlignment="Left" Margin="68,11,0,0" Name="textBox6" VerticalAlignment="Top" Width="66" />
+                        <TextBox Text="{Binding LandmarkSetM.TranslationY}" Height="23" HorizontalAlignment="Left" Margin="68,47,0,0" Name="textBox7" VerticalAlignment="Top" Width="66" />
+                    </Grid>
+                </GroupBox>
+            </Grid>
+        </TabItem>
+    </TabControl>
+</UserControl>

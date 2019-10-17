@@ -1,0 +1,31 @@
+0625：点击距离探测的时候首先会查询当前偏心是否开启，然后以查询的状态值下载点击参数
+0626：
+1.将靶标探测的时候存储靶标X,Y数据有两个map换位一个map
+2.选中靶标列表的时候以选中的X,Y坐标值显示视图（先不用，等项目组的意见）
+0701：
+1.增加了心跳开启下断网重连功能
+0702-0703：
+1.优化心跳开启下断网重连功能
+0705：
+1.判断网络是否连上由参数查询次数3改为5；
+0709：
+1.切到距离探测的时候，查询点数比例，然后下载；
+0712：
+1.版本更新为V2.5.2，发给汪俊
+0801：
+1.对靶标添加的时候靶标显示蓝色功能进行修改，如下所示：
+   1.SetLMArrayDisplay(int x[12000], int y[12000], int LMID[12000], int LMCount, int SetLMKind,bool importFlag=false)加了bool importFlag=false
+，用来判断是否为从文件导入的靶标，若是则要将这些靶标名存储到显示为黑色的靶标数组中，以防其显示为蓝色；
+   2.手动编辑靶标信息列表时，也会将靶标名存储到显示为黑色的靶标数组中，以防其显示为蓝色；
+0806：
+   1.为了防止颜色显示（添加）数组越界，将数组大小设置为2500，用LMColorArray表示；
+   2.增加了越界逻辑判断
+0808：
+   1.去掉了存储到显示为黑色的靶标数组；
+   2.LandmarkSetInfo增加了flagBlueColor变量，构造函数中会将其设置为0；
+   3.SetLMArrayDisplay(int[] x, int[] y, int[] LMID, int[] BlueColorFlag, int LMCount, int SetLMKind, bool f_LayerChange = false)加了
+int[] BlueColorFlag和bool f_LayerChange = false。BlueColorFlag用来作为是否变蓝色标志位，f_LayerChange 用来选中某层时保证其
+靶标保持上次的颜色
+上次的颜色
+0911：
+1.pcldll *pcl=new pcldll,改为if（！pcldll）{pcldll *pcl=new pcldll}

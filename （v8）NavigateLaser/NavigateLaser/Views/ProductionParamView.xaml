@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="NavigateLaser.Views.ProductionParamView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="700" IsEnabled="{Binding ProductionParamM.IsEnable}" FontSize="14">
+    <Grid>
+        <GroupBox Header="网络参数" Background="#00000000" Height="170" HorizontalAlignment="Left" Margin="20,21,0,0" Name="groupBox2" VerticalAlignment="Top" Width="400">
+            <Grid>
+                <Label Content="IP" Height="25" HorizontalAlignment="Left" Margin="47,46,0,0" Name="label11" VerticalAlignment="Top" />
+                <TextBox Text="{Binding ProductionParamM.DeviceIP}" Height="25" HorizontalAlignment="Left" Margin="74,46,0,0" Name="textBox11" VerticalAlignment="Top" Width="110" />
+                <Label Content="子网掩码" Height="25" HorizontalAlignment="Left" Margin="5,79,0,0" Name="label12" VerticalAlignment="Top" />
+                <TextBox Text="{Binding ProductionParamM.DeviceSubnetMask}" Height="25" HorizontalAlignment="Left" Margin="74,79,0,0" Name="textBox12" VerticalAlignment="Top" Width="110" />
+                <Label Content="网关" Height="25" HorizontalAlignment="Left" Margin="218,79,0,0" Name="label13" VerticalAlignment="Top" />
+                <TextBox Text="{Binding ProductionParamM.DeviceGateway}" Height="25" HorizontalAlignment="Left" Margin="258,79,0,0" Name="textBox13" VerticalAlignment="Top" Width="110" />
+                <Label Content="本地端口" Height="25" HorizontalAlignment="Left" Margin="190,46,0,0" Name="label14" VerticalAlignment="Top" />
+                <TextBox Text="{Binding ProductionParamM.DevicePort}" Height="25" HorizontalAlignment="Left" Margin="258,46,0,0" Name="textBox14" VerticalAlignment="Top" Width="110" />
+                <Label Content="MAC" Height="25" HorizontalAlignment="Left" Margin="30,11,0,0" Name="label15" VerticalAlignment="Top" />
+                <TextBox Text="{Binding ProductionParamM.DeviceMAC}" Height="25" HorizontalAlignment="Left" Margin="74,11,0,0" Name="textBox15" VerticalAlignment="Top" Width="294" IsEnabled="False"/>
+                <Button Content="查询" Height="25" HorizontalAlignment="Left" Margin="98,113,0,0" Name="btGetNetParam" 
+                        VerticalAlignment="Top" Width="75" Command="{Binding GetNetParamCommand}" />
+                <Button Content="设置" Height="25" HorizontalAlignment="Left" Margin="222,113,0,0" Name="btSetNetParam" 
+                        VerticalAlignment="Top" Width="75" Command="{Binding SetNetParamCommand}"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="恢复出厂设置" Background="#00000000" Height="70" HorizontalAlignment="Left" Margin="20,200,0,0" Name="groupBox4" VerticalAlignment="Top" Width="400">
+            <Grid>
+                <Button Content="一键恢复出厂设置" Height="25" HorizontalAlignment="Left" Margin="118,10,0,0" Name="bt" VerticalAlignment="Top" Width="151" Command="{Binding ResFactorySettingCommand}" />
+            </Grid>
+        </GroupBox>
+    </Grid>
+</UserControl>

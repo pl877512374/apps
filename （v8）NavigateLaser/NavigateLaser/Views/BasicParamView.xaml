@@ -1,0 +1,75 @@
+﻿<UserControl x:Class="NavigateLaser.Views.BasicParamView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="427.5" d:DesignWidth="913" IsEnabled="{Binding BasicParamM.IsEnable}" FontSize="14">
+    <Grid Margin="0,0,-48,-34">
+        <GroupBox Header="版本号" Background="#00000000"  Height="160" HorizontalAlignment="Left" Margin="20,85,0,0" Name="groupBox1" VerticalAlignment="Top" Width="250">
+            <Grid>
+                <Label Content="硬件" Height="28" HorizontalAlignment="Left" Margin="16,5,0,0" Name="label6" VerticalAlignment="Top" />
+                <TextBox Text="{Binding BasicParamM.HardwareVersion}" Height="25" HorizontalAlignment="Left" Margin="55,6,0,0" Name="textBox4" VerticalAlignment="Top" Width="170" IsEnabled="False"/>
+                <Label Content="程序" Height="28" HorizontalAlignment="Left" Margin="16,37,0,0" Name="label7" VerticalAlignment="Top" />
+                <TextBox Text="{Binding BasicParamM.ProgramVersion}" Height="25" HorizontalAlignment="Left" Margin="55,38,0,0" Name="textBox5" VerticalAlignment="Top" Width="170" IsEnabled="False"/>
+                <Label Content="算法" Height="28" HorizontalAlignment="Left" Margin="16,68,0,0" Name="label8" VerticalAlignment="Top" RenderTransformOrigin="3.513,0.732" />
+                <TextBox Text="{Binding BasicParamM.FPGAVersion}" Height="25" HorizontalAlignment="Left" Margin="55,68,0,0" Name="textBox6" VerticalAlignment="Top" Width="170" IsEnabled="False"/>
+                <Button Content="查询" Height="25" Name="btGetVersions" Width="75" Margin="86,100,77,10" Command="{Binding GetVersionsCommand}" />
+            </Grid>
+        </GroupBox>
+
+        <GroupBox Header="基本操作" Background="#00000000" Height="70" HorizontalAlignment="Left" Margin="20,7,0,0" Name="groupBox2" VerticalAlignment="Top" Width="250">
+            <Grid>
+                <Button Content="重启激光器" Height="25" HorizontalAlignment="Left" Margin="72,10,0,0" Name="btRestartLaser" VerticalAlignment="Top" Width="80" Command="{Binding RestartLaserCommand}" />
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="基本参数" Background="#00000000" Height="160" HorizontalAlignment="Left" Margin="20,255,0,0" Name="groupBox3" VerticalAlignment="Top" Width="250">
+            <Grid>
+                <Label Content="分辨率" Height="28" HorizontalAlignment="Left" Margin="42,16,0,0" Name="label4" VerticalAlignment="Top" />
+                <ComboBox Height="25" HorizontalAlignment="Left" Margin="108,17,0,0" Name="cbResolutions" VerticalAlignment="Top" Width="75" 
+                          ItemsSource="{Binding BasicParamM.Resolutions}" SelectedItem="{Binding BasicParamM.SelectedResolution}" />
+                <Label Content="心跳" Height="28" HorizontalAlignment="Left" Margin="56,55,0,0" Name="label5" VerticalAlignment="Top" />
+                <ComboBox Height="25" HorizontalAlignment="Left" Margin="108,56,0,0" Name="cbBeat" VerticalAlignment="Top" Width="75" 
+                          ItemsSource="{Binding BasicParamM.Beats}" SelectedItem="{Binding BasicParamM.SelectedBeat}" />
+                <Button Content="查询" Height="25" HorizontalAlignment="Left" Margin="46,97,0,0" Name="btGetBasicParam" 
+                        VerticalAlignment="Top" Width="60" Command="{Binding GetBasicParamCommand}" />
+                <Button Content="设置" Height="25" HorizontalAlignment="Left" Margin="126,97,0,0" Name="btSetBasicParam" 
+                        VerticalAlignment="Top" Width="60" Command="{Binding SetBasicParamCommand}" />
+            </Grid>
+        </GroupBox>
+        <ProgressBar HorizontalAlignment="Left" Height="113" Margin="314,60,0,0" VerticalAlignment="Top" Width="20"
+                     Value="{Binding BasicParamM.InputVol}" Orientation="Vertical" Background="{DynamicResource {x:Static SystemColors.GradientInactiveCaptionBrushKey}}" 
+                     Foreground="#FF223DB9" Maximum="50"/>
+        <Label Content="参数一" HorizontalAlignment="Left" Margin="303,18,0,0" VerticalAlignment="Top" Width="86" Height="29" RenderTransformOrigin="1.268,0.917"/>
+        <ProgressBar HorizontalAlignment="Left" Height="113" Margin="429,60,0,0" VerticalAlignment="Top" Width="20" 
+                     Orientation="Vertical" Value="{Binding BasicParamM.HighVol}" Maximum="300" 
+                     Background="{DynamicResource {x:Static SystemColors.GradientInactiveCaptionBrushKey}}" Foreground="#FF223DB9"/>
+        <Label Content="参数二" HorizontalAlignment="Left" Margin="420,18,0,0" VerticalAlignment="Top" Width="86" Height="29" RenderTransformOrigin="1.268,0.917"/>
+        <ProgressBar HorizontalAlignment="Left" Height="113" Margin="541,60,0,0" VerticalAlignment="Top" Width="20" Orientation="Vertical" 
+                     Value="{Binding BasicParamM.APDTemp}" Background="{DynamicResource {x:Static SystemColors.GradientInactiveCaptionBrushKey}}" Foreground="#FF223DB9" />
+        <Label Content="参数三" HorizontalAlignment="Left" Margin="525,18,0,0" VerticalAlignment="Top" Width="91" Height="29" RenderTransformOrigin="1.268,0.917"/>
+        <ProgressBar HorizontalAlignment="Left" Height="113" Margin="655,60,0,0" VerticalAlignment="Top" Width="20" Orientation="Vertical" 
+                     Value="{Binding BasicParamM.MotorTemp}" Background="{DynamicResource {x:Static SystemColors.GradientInactiveCaptionBrushKey}}" Foreground="#FF223DB9"/>
+        <Label Content="参数四" HorizontalAlignment="Left" Margin="642,18,0,0" VerticalAlignment="Top" Width="90" Height="29" RenderTransformOrigin="1.268,0.917"/>
+        <ProgressBar HorizontalAlignment="Left" Height="113" Margin="761,60,0,0" VerticalAlignment="Top" Width="20" Orientation="Vertical" 
+                     Value="{Binding BasicParamM.WirelessVol}" Background="{DynamicResource {x:Static SystemColors.GradientInactiveCaptionBrushKey}}" Foreground="#FF223DB9" Maximum="50"/>
+        <Label Content="参数五" HorizontalAlignment="Left" Margin="746,18,0,0" VerticalAlignment="Top" Width="113" Height="29" RenderTransformOrigin="1.268,0.917"/>
+        <GroupBox Header="表数据查询" HorizontalAlignment="Left" Margin="289,191,0,0" VerticalAlignment="Top" Height="236" Width="561" Visibility="Hidden" />
+        <ComboBox HorizontalAlignment="Left" Margin="429,225,0,0" VerticalAlignment="Top" Width="86"
+                  ItemsSource="{Binding BasicParamM.TableTypes}" SelectedItem="{Binding BasicParamM.SelectedTableType}" Visibility="Hidden"/>
+        <Label Content="数据表类型" HorizontalAlignment="Left" Margin="331,221,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+        <Label Content="查询地址偏移量" HorizontalAlignment="Left" Margin="303,274,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.787,1.321" Visibility="Hidden"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="429,274,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="86"
+                 Text="{Binding BasicParamM.AddressOffset}" Visibility="Hidden"/>
+        <Button Content="查询" HorizontalAlignment="Left" Margin="541,225,0,0" VerticalAlignment="Top" Width="75"
+                Command="{Binding TableContentQueryCommand}" Visibility="Hidden"/>
+        <RichTextBox HorizontalAlignment="Left" Height="190" Margin="628,225,0,0" VerticalAlignment="Top" Width="212" Visibility="Hidden">
+            <FlowDocument/>
+        </RichTextBox>
+        <TextBox HorizontalAlignment="Left" Height="35" Margin="345,70,0,0" TextWrapping="Wrap" Text="{Binding BasicParamM.StrInputVol}" VerticalAlignment="Top" Width="66" IsEnabled="False"/>
+        <TextBox HorizontalAlignment="Left" Height="35" Margin="463,70,0,0" TextWrapping="Wrap" Text="{Binding BasicParamM.StrHighVol}" VerticalAlignment="Top" Width="62" IsEnabled="False"/>
+        <TextBox HorizontalAlignment="Left" Height="35" Margin="566,70,0,0" TextWrapping="Wrap" Text="{Binding BasicParamM.StrAPDTemp}" VerticalAlignment="Top" Width="60" IsEnabled="False"/>
+        <TextBox HorizontalAlignment="Left" Height="35" Margin="680,70,0,0" TextWrapping="Wrap" Text="{Binding BasicParamM.StrMotorTemp}" VerticalAlignment="Top" Width="60" IsEnabled="False"/>
+        <TextBox HorizontalAlignment="Left" Height="35" Margin="786,70,0,0" TextWrapping="Wrap" Text="{Binding BasicParamM.StrWirelessVol}" VerticalAlignment="Top" Width="54" IsEnabled="False"/>
+    </Grid>
+</UserControl>
